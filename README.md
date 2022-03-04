@@ -107,7 +107,7 @@ Manque de données d’entrées
 -	Le modèle actuel possède peu de données, nous avons seulement 1050 échantillons.
 
 Objectif interne à l’entreprise
--	Parmi ceux non solvable réel, presque 50% d’entre eux sont prédit comme solvable. Il s’agit d’un compromis où beaucoup prêts seraient perdus si le seuil était diminué. Il s’agit donc d’une considération en dehors de ce projet.
+-	Parmi ceux non solvable réel, presque 50% d’entre eux sont prédit comme solvable. Il s’agit d’un compromis où beaucoup de prêts seraient perdus si le seuil était diminué. Il s’agit donc d’une considération en dehors de ce projet.
 
 Domain Knowledge
--	Une meilleure connaissance du domaine permettrait une utilisation des autres tableaux à disposition. En effet, augmenter le nombre de dimension permettrait d’effectuer du features  engineering afin de réduire la dimension de nos données.
+-	Une meilleure connaissance du domaine permettrait une utilisation des autres tableaux à disposition. En effet, augmenter le nombre de dimension permettrait d’effectuer du features engineering afin de réduire la dimension de nos données.
