@@ -7,12 +7,12 @@ Evaluer la solvabilité de client auprès d’une banque, en vue d’un prêt.
 Pour ceci, nous avons à disposition plusieurs tableau d’informations. Ceux-ci contiennent les informations personnelles :
 -	Nombre d’enfant
 -	Type d’emploi occupé
--	Situation maritale
--	…
-Et plus bancaires :
+-	Situation maritale, etc
+
+Et de données bancaires :
 -	Dernières dates d’emprunts
--	Salaires
--	…
+-	Salaires, etc
+-	
 Les contraintes sont d’obtenir une classification entre les non solvables et les clients solvables, par entraînement supervisée.
 
 Ainsi nous avons un tableau présentant les données de clients anonymes, ayant été solvable ou non.
