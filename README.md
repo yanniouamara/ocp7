@@ -1,6 +1,6 @@
-##Introduction
+## Introduction
 
-#Implémenter un modèle de Scoring
+# Implémenter un modèle de Scoring
 
 Evaluer la solvabilité de client auprès d’une banque, en vue d’un prêt.
 
@@ -17,13 +17,13 @@ Les contraintes sont d’obtenir une classification entre les non solvables et l
 
 Ainsi nous avons un tableau présentant les données de clients anonymes, ayant été solvable ou non.
 
-##Méthodologie d’entraînement du modèle
+## Méthodologie d’entraînement du modèle
 
-#Nettoyage des données
+# Nettoyage des données
 
 L’exploration et le nettoyage des données s’est effectué en deux itérations.
 
-#1ere iteration
+# 1ere iteration
 
 On a tout d’abord recherché les valeurs manquantes dans notre jeu de données application_train.csv
  
@@ -33,18 +33,18 @@ On a choisi ici l’algorithme MissForest. L’algorithme permet de compléter l
 Il utilise pour cela un algorithme Tree Based qui permet l’imputation selon les échantillons les plus proches, par moyenne et autres variables statistiques.
 S’en suit une gestion des valeurs aberrantes. Or il s’avère qu’il y a des valeurs aberrantes pour la colonne « DAYS_EMPLOYED » d’application_train et test. Cette valeur spécifique ne signifie rien sur la solvabilité du client, ainsi elle a pu se propager.
 
-#2eme iteration
+# 2eme iteration
 
 Gestion des valeurs aberrantes puis imputation par MissForest des valeurs manquantes. Les données catégorielles ont auparavant été mise sous forme de one-hot-encoding.
 Les features choisies ont été déterminées par RandomForest, les 40 premières features ont été conservées.
 
 
-#Modèle choisi
+# Modèle choisi
 
 Le modèle choisi doit correspondre aux contraintes de l’énoncé. Il doit donc s’agir d’un classifieur binaire permettent une probabilité d’appartenance à chaque classe. De plus, une explication d’attribution à une classe ou une autre doit être possible.
 LightGBM est l’algorithme qui sera utilisé. Il permet de choisir un classifieur binaire. Il permet aussi de choisir la métrique d’entrainement ici, ce qui est très important au vu du sujet choisi.
 
-#Spécificités du modèle
+# Spécificités du modèle
 #Fonction coût métier
 Les modèles vont être évalués selon une métrique adaptée au problème métier. On part du principe que la société financière veut optimiser ses gains (et donc minimiser ses pertes).
  
@@ -52,7 +52,7 @@ La société étant un organisme de prêts, outre la bonne détection des prêts
 En effet, le parti pris dans mon cas est de minimiser les Faux Positifs. On veut éviter au maximum de proposer un prêt à une personne potentiellement non solvable. On utilisera donc la métrique Area Under the ROC curve, donc « AUC » de notre classifieur.
 Enfin, le partage des classes est très désavantagé. On va donc aussi changer les poids d’entrainement de notre algorithme en choisissant le paramètre « is_unbalanced=True ».
 
-#Algorithme d'optimisation
+# Algorithme d'optimisation
 Afin de déterminer les paramètres de notre modèle, nous utilons le BayesSearchCv de la librairie scikit-optimize. Il nous permet d’explorer un espace de paramètre de manière non exhaustive en utilisant une fonction de score spéficique.
 Pour cela, il va inférer à partir d’ancien score obtenu par notre fonction de coût ici (metric = « AUC »). Il va donc so’rienter petit à petit vers un minimum local voir global.
 
