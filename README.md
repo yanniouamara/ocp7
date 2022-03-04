@@ -79,6 +79,8 @@ False Positive Rate: ![image](https://user-images.githubusercontent.com/40555695
 En sorti de notre algorithme, nous utilisons le predict_proba de notre modèle.
 On obtient donc une probailité d’attribution à une classe ou une autre. On peut donc utiliser cette probabilité et évaluer le FPR et TPR selon différent seuil de probabilité.
 On se retrouve donc avec ces deux graphiques :
+
+
 ![image](https://user-images.githubusercontent.com/40555695/156808308-b75abc1e-a804-42f6-9937-e85361e82773.png) 
 
 ![image](https://user-images.githubusercontent.com/40555695/156808332-b34565bc-f1f7-4d5a-ab3c-6d09de402983.png)
