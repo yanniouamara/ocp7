@@ -1,4 +1,4 @@
-## <p align="center"> Implémenter un modèle de Scoring</p>
+### <p align="center"> Implémenter un modèle de Scoring</p>
 
 # Objectif 
 Evaluer la solvabilité de client auprès d’une banque, en vue d’un prêt.
