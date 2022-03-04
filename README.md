@@ -97,7 +97,7 @@ L’algorithme SHAP permet de sortir d’un modèle Tree l’importance des cara
 
 Ces importances sont négatives ou positives selon la nature de l’impact sur la sortie de notre modèle.
 
-#Limites et Améliorations du modèle
+# Limites et Améliorations du modèle
 
 Manque de données d’entrées
 -	Le modèle actuel possède peu de données, nous avons seulement 1050 échantillons.
