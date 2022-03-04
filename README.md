@@ -11,7 +11,7 @@ Pour ceci, nous avons à disposition plusieurs tableau d’informations. Ceux-ci
 Et de données bancaires :
 -	Dernières dates d’emprunts
 -	Salaires, etc
--	
+
 Les contraintes sont d’obtenir une classification entre les non solvables et les clients solvables, par entraînement supervisée.
 
 Ainsi nous avons un tableau présentant les données de clients anonymes, ayant été solvable ou non.
