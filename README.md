@@ -71,7 +71,8 @@ Pour cela, il va inférer à partir d’ancien score obtenu par notre fonction d
 La métrique d’évaluation est finalement ce qui va nous permettre d’évaluer si notre modèle permet d’atteindre notre objectif de minimisation des FPs. 
 Ainsi nous utilisons le ratio entre les Faux Positifs et les Vrais Positifs afin de trouver un compromis entre le fait de reconnaître la solvabilité de quelqu’un, et d’éviter de prêter à un client.
 
-True positive Rate: 		![image](https://user-images.githubusercontent.com/40555695/156807992-224294c6-637e-44b6-8d2f-9bcb5dec5669.png)	      
+True positive Rate: 		![image](https://user-images.githubusercontent.com/40555695/156808735-2ef3277f-9fec-4a0a-aae8-87ad59e3bde5.png)
+
 
 False Positive Rate: ![image](https://user-images.githubusercontent.com/40555695/156808025-6706edb0-aeda-4132-a865-1b01b11d5eda.png)
 
