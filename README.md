@@ -1,6 +1,4 @@
-<p align="center">Introduction</p>
-
-# Implémenter un modèle de Scoring
+<p align="center">## Implémenter un modèle de Scoring</p>
 
 Evaluer la solvabilité de client auprès d’une banque, en vue d’un prêt.
 
